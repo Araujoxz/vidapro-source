@@ -39,7 +39,7 @@ export async function getDb() {
 // ---- USERS ----
 export async function upsertUser(user: InsertUser): Promise<void> {
  if (!user.openId) {
-  user.openId = "admin";
+  user.openId = "local-user";
 }
   const db = await getDb();
   if (!db) return;
